@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import cls from './MainPage.module.scss';
 
-const MainPage: React.FC = (props) => {
+const MainPage: React.FC = () => {
     const [test, setTest] = useState();
 
     return (
