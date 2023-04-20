@@ -1,17 +1,11 @@
-import classNames from 'classnames';
+import { useState } from 'react';
 import cls from './MainPage.module.scss';
 
-interface MainPageProps {
-    className?: string;
-}
-
-const MainPage: React.FC<MainPageProps> = (props) => {
-    const {
-        className,
-    } = props;
+const MainPage: React.FC = (props) => {
+    const [test, setTest] = useState();
 
     return (
-        <main className={classNames(cls.main, [className])}>
+        <main className={cls.main}>
             <h1>MainPage</h1>
         </main>
     );
