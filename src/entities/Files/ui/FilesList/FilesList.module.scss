@@ -1,0 +1,38 @@
+.filesList {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid rgb(197 194 194);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+.size {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+}
+
+.add {
+    width: 130px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}

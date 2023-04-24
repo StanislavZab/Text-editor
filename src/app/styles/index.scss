@@ -3,5 +3,9 @@
 
 .app {
     font: var(--font-m);
+    max-width: 1000px;
     min-height: 100vh;
+    margin: auto;
+    padding: 40px;
+    display: flex;
 }
