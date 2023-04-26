@@ -1,7 +1,7 @@
 export interface File {
     name: string;
-    extension: string;
-    fileSizeInBytes: string;
+    id: string;
+    size: string;
 }
 
 export interface FilesListSchema {

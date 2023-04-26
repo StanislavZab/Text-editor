@@ -22,7 +22,7 @@ export const FilesListItem: React.FC<FilesListItemProps> = (props) => {
 
     return (
         <AppLink
-            to={RoutePath.file_edit + item.name}
+            to={RoutePath.file_edit + item.id}
             className={classNames(cls.filesListItem, className)}
         >
             <div className={cls.filename}>
@@ -30,7 +30,7 @@ export const FilesListItem: React.FC<FilesListItemProps> = (props) => {
                 <Text title={item.name} />
             </div>
             <div className={cls.size}>
-                <Text title={item.fileSizeInBytes} className={cls.size} />
+                <Text title={item.size} className={cls.size} />
             </div>
             <div className={cls.delete}>
                 {Delete}

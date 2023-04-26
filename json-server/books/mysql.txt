@@ -1,8 +1,0 @@
-sudo apt-get install --reinstall mysql-server-8.0
-
-
-полностью снести mysql:
-sudo apt purge mysql-server*
-sudo rm -r /etc/mysql /var/lib/mysql
-sudo rm -r /var/log/mysql
-sudo apt autoremove

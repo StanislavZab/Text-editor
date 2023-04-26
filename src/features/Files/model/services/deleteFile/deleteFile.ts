@@ -8,9 +8,9 @@ export const deleteFiles = createAsyncThunk<
     ThunkConfig<string>
 >(
     'files/deleteFiles',
-    async (filename, { extra, rejectWithValue, dispatch }) => {
+    async (id, { extra, rejectWithValue, dispatch }) => {
         try {
-            const response = await extra.api.delete(`/files/${filename}`);
+            const response = await extra.api.delete(`/files/${id}`);
 
             if (response.status !== 200) {
                 throw new Error();

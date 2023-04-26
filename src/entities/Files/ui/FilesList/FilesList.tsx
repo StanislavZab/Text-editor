@@ -16,12 +16,6 @@ interface FilesListProps {
     AddButton: ReactNode;
 }
 
-const file: File[] = [
-    { name: 'File1.txt', extension: '.txt', fileSizeInBytes: '43 Bytes' },
-    { name: 'File2.txt', extension: '.txt', fileSizeInBytes: '0 Bytes' },
-    { name: 'File3.txt', extension: '.txt', fileSizeInBytes: '0 Bytes' },
-];
-
 export const FilesList: React.FC<FilesListProps> = (props) => {
     const {
         className,
@@ -37,7 +31,7 @@ export const FilesList: React.FC<FilesListProps> = (props) => {
         dispatch(fetchFilesList());
     }, [dispatch]);
 
-    if (isLoading) {
+    if (isLoading && !data) {
         return (
             <div className={classNames(cls.filesList, className)}>
                 <Skeleton width="100%" height={40} />
@@ -71,7 +65,7 @@ export const FilesList: React.FC<FilesListProps> = (props) => {
                 <FilesListItem
                     key={item.name}
                     item={item}
-                    Delete={<FileDelete filename={item.name} />}
+                    Delete={<FileDelete id={item.id} />}
                 />
             ))}
         </div>
